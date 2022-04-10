@@ -143,6 +143,7 @@ Finally, I will take the following steps to run the program from server.
 ![image](images/whereami_ssh.png)
 
 *note: it did not prompt me to enter password because I already have a key set up (cover next section). The `WhereAmI.class` is already there because I built it before*<br>
+
 ________
 
 ## Setting an SSH Key
