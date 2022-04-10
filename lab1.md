@@ -64,7 +64,7 @@ Type `yes` in your terminal and enter your password.
 
 > The password will not be visible on terminal; however, it is still logged as each character is typed in.
 
-When this process is done, your screen should look similar similar to that below.
+When this process is done, your screen should look similar to that below.
 
 ![image](images/SSH_setup.png)
 
@@ -147,6 +147,41 @@ Finally, I will take the following steps to run the program from server.
 ________
 
 ## Setting an SSH Key
+
+It is a tedious process to have to type in your password every time you run `ssh` or `scp`. We can speed up this process by generating `ssh keys`, which allows SSH to use a pair of files for your password.
+
+In order to set up `SSH Key`, please follow these steps.
+
+#### type the following command on your client's terminal
+
+```
+$ ssh-keygen
+```
+- type in the file path provided in parathesis
+  - *my file already exists from before, which prompted the question if I want to overwrite it*
+- press `enter` for no passphrase
+- press `enter` again
+
+
+After those steps, your terminal should look similar to the image below.
+
+![image](images/set%20up%20ssh%20key.png)
+
+After, log in to the server and execute the following commands.
+
+```
+$ ssh cs15lsp22[YOUR USER]@ieng6.ucsd.edu
+$ mkdir.ssh
+$ exit
+```
+Now you should be back on the client computer. Copy your key over with the following command
+
+```
+scp /Users/[YOUR USERNAME]/.ssh/id_rsa.pub
+cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
+
+Once this process is done, you should be able to execute `ssh` and `scp` without a password.
 ________
 
 ## Optimizing Remote Running
