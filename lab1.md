@@ -26,7 +26,6 @@ The following table provides a brief description of the icons on the side menu.
 | ![image](images/debug.png) | Run and Debug | This function allows you to debug the errors in your code.|
 | ![image](images/extensions.png) | Extensions | You may install extension packages here. They are extra tools that may be useful for certain projects.|
 
-____
 ________
 ## Remotely Connecting
 
@@ -73,6 +72,40 @@ ________
 
 ## Trying Some Commands
 ________
+
+The following table includes the basic commands
+
+|Name |Functionality |Arg|
+| --- | --- | ---|
+| pwd | prints the path for the working directory | none |
+| ls | list the file in working directory | none |
+| ls -a| list all the files and hidden files in working directory | none |
+| cp | copy a file | \<source>\<destination>|
+|mkdir| makes a directory | name of the directory |
+|rm | removes a file | name of file |
+| cat | look at, create, or edit a file | \> and filename |
+|touch | create a file | filename |
+|Ctrl C or D | exit out of remote server| None |
+----
+
+> You may use the `tab` key to auto-complete your command.<br>
+> The `up` arrow allows you to view the previously executed commands.
+
+I ran a few commands below. The narration can be found under the screenshot.
+
+![image](images/terminal_commands.png)
+
+- I changed directory back to admin
+- I changed directory to `Desktop` and then a pre-existing directory called `Projects`
+- I made a directory named `commands_test`
+- I made a file named `test1.txt`
+- I edited `test1.txt` with the following texts
+  - hello
+  - my name is phoebe
+  - i like food
+- I exited out of editing
+- I typed `cat test1.txt` again to look at the file
+- I typed ls to list the files in `commands_test`
 
 ## Moving Files with scp
 ________
