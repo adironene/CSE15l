@@ -181,6 +181,7 @@ cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ![image](images/copy%20key.png)
 
 Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
+
 ________
 
 ## Optimizing Remote Running
