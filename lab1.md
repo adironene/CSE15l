@@ -181,7 +181,7 @@ scp /Users/[YOUR USERNAME]/.ssh/id_rsa.pub
 cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
 
-Once this process is done, you should be able to execute `ssh` and `scp` without a password.
+Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
 ________
 
 ## Optimizing Remote Running
