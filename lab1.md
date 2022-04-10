@@ -66,7 +66,7 @@ Type `yes` in your terminal and enter your password.
 
 When this process is done, your screen should look similar similar to that below.
 
-![image](images/set_up_ssh.png)
+![image](images/SSH_setup.png)
 
 You are now connected to a CSE lab computer. We will now explore some comands.
 ________
