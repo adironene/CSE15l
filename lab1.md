@@ -88,9 +88,6 @@ The following table includes the basic commands
 |Ctrl C or D | exit out of remote server| None |
 ----
 
-> You may use the `tab` key to auto-complete your command.<br>
-> The `up` arrow allows you to view the previously executed commands.
-
 I ran a few commands below. The narration can be found under the screenshot.
 
 ![image](images/terminal_commands.png)
@@ -181,7 +178,14 @@ scp /Users/[YOUR USERNAME]/.ssh/id_rsa.pub
 cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
 
+![image](images/copy%20key.png)
+
 Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
 ________
 
 ## Optimizing Remote Running
+
+There are a few ways to optimize the process of executing commands. The following shortcuts are very useful
+
+- You may use the `tab` key to auto-complete your command.
+- The `up` arrow allows you to view the previously executed commands.
