@@ -25,6 +25,8 @@ The following table provides a brief description of the icons on the side menu.
 | ![image](images/source.png)| Source Control | The class that handles the changes made to the directory.|
 | ![image](images/debug.png) | Run and Debug | This function allows you to debug the errors in your code.|
 | ![image](images/extensions.png) | Extensions | You may install extension packages here. They are extra tools that may be useful for certain projects.|
+
+____
 ## Remotely Connecting
 
 > MacOS and Linux terminals have SSH built in. If you are using Windows, please [install SSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
@@ -66,11 +68,15 @@ When this process is done, your screen should look similar similar to that below
 ![image](images/set_up_ssh.png)
 
 You are now connected to a CSE lab computer. We will now explore some comands.
+____
 
 ## Trying Some Commands
+____
 
 ## Moving Files with scp
+____
 
 ## Setting an SSH Key
+____
 
 ## Optimizing Remote Running
