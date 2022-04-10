@@ -61,6 +61,7 @@ Are you sure you want to continue connecting
 ```
 
 Type `yes` in your terminal and enter your password.
+
 > The password will not be visible on terminal; however, it is still logged as each character is typed in.
 
 When this process is done, your screen should look similar similar to that below.
@@ -71,7 +72,6 @@ You are now connected to a CSE lab computer. We will now explore some comands.
 ________
 
 ## Trying Some Commands
-________
 
 The following table includes the basic commands
 
@@ -107,7 +107,42 @@ I ran a few commands below. The narration can be found under the screenshot.
 - I typed `cat test1.txt` again to look at the file
 - I typed ls to list the files in `commands_test`
 
+________
+
 ## Moving Files with scp
+
+> We will use the file given by Lab 1 to better demonstrate scp
+
+```java
+class WhereAmI {
+public static void main(String[] args) {
+System.out.println(System.getProperty("os.name"));
+System.out.println(System.getProperty("user.name"));
+System.out.println(System.getProperty("user.home"));
+System.out.println(System.getProperty("user.dir"));
+}
+}
+```
+
+The follow image builds the writes, builds, and executes the `WhereAmI.java` file. As we can see, the information is fetched from the client.
+
+![image](images/whereami_setup.png)
+
+Next, I will copy the file to the server with the command.
+```
+scp WhereAmI.java cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/
+```
+Finally, I will take the following steps to run the program from server.
+
+- Log in to SSH
+- Enter my password
+- Use the `javac` command to build `WhereAmI.java`
+- Use the `java` command to run the `WhereAmI` class
+- The program then fetches information from the server
+
+![image](images/whereami_ssh.png)
+
+*note: it did not prompt me to enter password because I already have a key set up (cover next section). The `WhereAmI.class` is already there because I built it before*
 ________
 
 ## Setting an SSH Key
