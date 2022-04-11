@@ -182,6 +182,8 @@ cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
 Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
 
+![image](images/SSH_Login_keychain.png)
+
 ________
 
 ## Optimizing Remote Running
@@ -190,3 +192,30 @@ There are a few ways to optimize the process of executing commands. The followin
 
 - You may use the `tab` key to auto-complete your command.
 - The `up` arrow allows you to view the previously executed commands.
+
+> You may execute another command after SSHing into the server by putting it in quotes. After both commands are executed, it exits out of the connection.<br>
+
+![image](images/ssh_shortcut.png)
+This command is equivalent to the following 3 commands
+
+```
+% ssh cs15lsp22aqw@ieng6.ucsd.edu
+$ cat WhereAmI.java
+$ exit
+```
+![image](images/ssh_long_way.png)
+
+> You may execut multiple commands by separating them with `;`
+
+```
+phoebetang@Admins-MacBook-Pro-2 ~ % cd Desktop; cd Projects; mkdir test1
+```
+This command is equivalent to the following 3 commands
+```
+phoebetang@Admins-MacBook-Pro-2 ~ % cd Desktop 
+phoebetang@Admins-MacBook-Pro-2 Desktop % cd Projects 
+phoebetang@Admins-MacBook-Pro-2 Projects % mkdir test1
+```
+
+----
+
