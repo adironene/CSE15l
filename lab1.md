@@ -68,7 +68,6 @@ Type `yes` in your terminal and enter your password.
 
 > The password will not be visible on terminal; however, it is still logged as each character is typed in.
 
-<br/><br/>
 When this process is done, your screen should look similar to that below.
 
 ![image](images/SSH_setup.png)
@@ -112,9 +111,10 @@ I ran a few commands below. The narration can be found under the screenshot.
 - I exited out of editing
 - I typed `cat test1.txt` again to look at the file
 - I typed ls to list the files in `commands_test`
-
 <br/><br/>
+
 ________
+
 
 <br/><br/>
 ## Moving Files with scp
@@ -153,11 +153,14 @@ Finally, I will take the following steps to run the program from server.
 *note: it did not prompt me to enter password because I already have a key set up (cover next section). The `WhereAmI.class` is already there because I built it before*<br>
 
 <br/><br/>
+
 ________
+
+
+<br/><br/>
 
 ## Setting an SSH Key
 
-<br/><br/>
 It is a tedious process to have to type in your password every time you run `ssh` or `scp`. We can speed up this process by generating `ssh keys`, which allows SSH to use a pair of files for your password.
 
 In order to set up `SSH Key`, please follow these steps.
@@ -193,17 +196,18 @@ cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
 ![image](images/copy%20key.png)
 
-<br/><br/>
 Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
 
 ![image](images/SSH_Login_keychain.png)
 
 <br/><br/>
+
 ________
 
-## Optimizing Remote Running
 
 <br/><br/>
+
+## Optimizing Remote Running
 There are a few ways to optimize the process of executing commands. The following shortcuts are very useful
 
 - You may use the `tab` key to auto-complete your command.
@@ -234,5 +238,8 @@ phoebetang@Admins-MacBook-Pro-2 Projects % mkdir test1
 ```
 
 <br/><br/>
-----
+
+________
+
+
 
