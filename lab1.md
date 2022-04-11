@@ -102,7 +102,7 @@ I ran a few commands below. The narration can be found under the screenshot.
 
 - I changed directory back to admin
 - I changed directory to `Desktop` and then a pre-existing directory called `Projects`
-- I made a directory named `commands_test`
+- I made a directory named `commands_test` and changed directory to it
 - I made a file named `test1.txt`
 - I edited `test1.txt` with the following texts
   - hello
@@ -119,20 +119,20 @@ ________
 <br/><br/>
 ## Moving Files with scp
 
-> We will use the file given by Lab 1 to better demonstrate scp
+*We will use the WhereAmI Java Program given by Lab 1 to better demonstrate scp*
 
 ```java
 class WhereAmI {
-public static void main(String[] args) {
-System.out.println(System.getProperty("os.name"));
-System.out.println(System.getProperty("user.name"));
-System.out.println(System.getProperty("user.home"));
-System.out.println(System.getProperty("user.dir"));
-}
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
 }
 ```
 
-The following image builds the writes, builds, and executes the `WhereAmI.java` file. As we can see, the information is fetched from the client.
+The following image writes, builds, and executes the `WhereAmI.java` file. As we can see, the information is fetched from the client.
 
 ![image](images/whereami_setup.png)
 
@@ -208,7 +208,7 @@ ________
 <br/><br/>
 
 ## Optimizing Remote Running
-There are a few ways to optimize the process of executing commands. The following shortcuts are very useful
+There are a few ways to optimize the process of executing commands. The following shortcuts are very useful.
 
 - You may use the `tab` key to auto-complete your command.
 - The `up` arrow allows you to view the previously executed commands.
