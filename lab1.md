@@ -1,7 +1,7 @@
 # Lab Report 1
 
 The Secure Shell Protocal, also known as SSH, allows two computers to securely communicate over an unsecured network. This blog post is a documentation of the steps required to set up and use remote access. 
-
+ <br/><br/>
 ## Installing VS Code   
 
 We will be using [VS Code](https://code.visualstudio.com/) as our main IDE for this course. 
@@ -11,10 +11,12 @@ We will be using [VS Code](https://code.visualstudio.com/) as our main IDE for t
 - Press the `Download` Button
 - Select `Window`, `Linx`, or `MacOS`
 - Finish the download process and open VS Code
-
+  
+<br/><br/>
 When the procedure is done, your IDE should look something similar to the image below.
 
 ![image](images/VSCode.png)
+<br/><br/>
 
 The following table provides a brief description of the icons on the side menu.
 
@@ -27,6 +29,7 @@ The following table provides a brief description of the icons on the side menu.
 | ![image](images/extensions.png) | Extensions | You may install extension packages here. They are extra tools that may be useful for certain projects.|
 
 ________
+<br/><br/>
 ## Remotely Connecting
 
 > MacOS and Linux terminals have SSH built in. If you are using Windows, please [install SSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
@@ -42,6 +45,7 @@ ________
 - Click back on `confirm password` and hit enter
 - _**Do NOT click on `Check Password`**_
 
+<br/><br/>
 Go back to VS Code and open a terminal (Control + `)
 Type the following command in your terminal
 
@@ -64,13 +68,16 @@ Type `yes` in your terminal and enter your password.
 
 > The password will not be visible on terminal; however, it is still logged as each character is typed in.
 
+<br/><br/>
 When this process is done, your screen should look similar to that below.
 
 ![image](images/SSH_setup.png)
 
-You are now connected to a CSE lab computer. We will now explore some comands.
+You are now connected to a CSE lab computer. We will now explore some comands.<br>
+
 ________
 
+<br/><br/>
 ## Trying Some Commands
 
 The following table includes the basic commands
@@ -86,8 +93,10 @@ The following table includes the basic commands
 | cat | look at, create, or edit a file | \> and filename |
 |touch | create a file | filename |
 |Ctrl C or D | exit out of remote server| None |
-----
 
+________
+
+<br/><br/>
 I ran a few commands below. The narration can be found under the screenshot.
 
 ![image](images/terminal_commands.png)
@@ -104,8 +113,10 @@ I ran a few commands below. The narration can be found under the screenshot.
 - I typed `cat test1.txt` again to look at the file
 - I typed ls to list the files in `commands_test`
 
+<br/><br/>
 ________
 
+<br/><br/>
 ## Moving Files with scp
 
 > We will use the file given by Lab 1 to better demonstrate scp
@@ -141,10 +152,12 @@ Finally, I will take the following steps to run the program from server.
 
 *note: it did not prompt me to enter password because I already have a key set up (cover next section). The `WhereAmI.class` is already there because I built it before*<br>
 
+<br/><br/>
 ________
 
 ## Setting an SSH Key
 
+<br/><br/>
 It is a tedious process to have to type in your password every time you run `ssh` or `scp`. We can speed up this process by generating `ssh keys`, which allows SSH to use a pair of files for your password.
 
 In order to set up `SSH Key`, please follow these steps.
@@ -159,7 +172,7 @@ $ ssh-keygen
 - press `enter` for no passphrase
 - press `enter` again
 
-
+<br/><br/>
 After those steps, your terminal should look similar to the image below.
 
 ![image](images/set%20up%20ssh%20key.png)
@@ -180,20 +193,23 @@ cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
 ![image](images/copy%20key.png)
 
+<br/><br/>
 Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
 
 ![image](images/SSH_Login_keychain.png)
 
+<br/><br/>
 ________
 
 ## Optimizing Remote Running
 
+<br/><br/>
 There are a few ways to optimize the process of executing commands. The following shortcuts are very useful
 
 - You may use the `tab` key to auto-complete your command.
 - The `up` arrow allows you to view the previously executed commands.
 
-> You may execute another command after SSHing into the server by putting it in quotes. After both commands are executed, it exits out of the connection.<br>
+#### You may execute another command after SSHing into the server by putting it in quotes. After both commands are executed, it exits out of the connection.<br>
 
 ![image](images/ssh_shortcut.png)
 This command is equivalent to the following 3 commands
@@ -205,17 +221,18 @@ $ exit
 ```
 ![image](images/ssh_long_way.png)
 
-> You may execut multiple commands by separating them with `;`
+#### You may execut multiple commands by separating them with `;`
 
 ```
 phoebetang@Admins-MacBook-Pro-2 ~ % cd Desktop; cd Projects; mkdir test1
 ```
-This command is equivalent to the following 3 commands
+**This command is equivalent to the following 3 commands**
 ```
 phoebetang@Admins-MacBook-Pro-2 ~ % cd Desktop 
 phoebetang@Admins-MacBook-Pro-2 Desktop % cd Projects 
 phoebetang@Admins-MacBook-Pro-2 Projects % mkdir test1
 ```
 
+<br/><br/>
 ----
 
