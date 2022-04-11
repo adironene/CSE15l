@@ -1,6 +1,6 @@
 # Lab Report 1
 
-The Secure Shell Protocal, also known as SSH, allows two computers to securely communicate over an unsecured network. This blog post is a documentation of the steps required to set up and use remote access. 
+The Secure Shell Protocol, also known as SSH, allows two computers to securely communicate over an unsecured network. This blog documents the steps required to set up and use remote access. 
  <br/><br/>
 ## Installing VS Code   
 
@@ -9,7 +9,7 @@ We will be using [VS Code](https://code.visualstudio.com/) as our main IDE for t
 **Please follow these steps to set up VS Code**
 - Head over to [VS Code Install Page](https://code.visualstudio.com/)
 - Press the `Download` Button
-- Select `Window`, `Linx`, or `MacOS`
+- Select `Window`, `Linx`, or `macOS`
 - Finish the download process and open VS Code
   
 <br/><br/>
@@ -32,7 +32,7 @@ ________
 <br/><br/>
 ## Remotely Connecting
 
-> MacOS and Linux terminals have SSH built in. If you are using Windows, please [install SSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
+> macOS and Linux terminals have SSH built-in. If you are using Windows, please [install SSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse).
 
 #### Look up your account name
 - Head over to [Change Password](https://sdacs.ucsd.edu/~icc/index.php) page
@@ -40,7 +40,7 @@ ________
   - For the `Student ID`, type your ID starting with A
 - After hitting `submit`, click on `change your password`
 - Next, type in your old password, new password, and confirm password.
-- Select `no` for change TritonLink password 
+- Select `no` to change TritonLink password 
 - Select `yes` to change course-specific account password
 - Click back on `confirm password` and hit enter
 - _**Do NOT click on `Check Password`**_
@@ -66,13 +66,13 @@ Are you sure you want to continue connecting
 
 Type `yes` in your terminal and enter your password.
 
-> The password will not be visible on terminal; however, it is still logged as each character is typed in.
+> The password will not be visible on the terminal; however, it is still logged as each character is typed in.
 
 When this process is done, your screen should look similar to that below.
 
 ![image](images/SSH_setup.png)
 
-You are now connected to a CSE lab computer. We will now explore some comands.<br>
+You are now connected to a CSE lab computer. We will now explore some commands.<br>
 
 ________
 
@@ -132,7 +132,7 @@ System.out.println(System.getProperty("user.dir"));
 }
 ```
 
-The follow image builds the writes, builds, and executes the `WhereAmI.java` file. As we can see, the information is fetched from the client.
+The following image builds the writes, builds, and executes the `WhereAmI.java` file. As we can see, the information is fetched from the client.
 
 ![image](images/whereami_setup.png)
 
@@ -187,7 +187,7 @@ $ ssh cs15lsp22[YOUR USER]@ieng6.ucsd.edu
 $ mkdir.ssh
 $ exit
 ```
-Now you should be back on the client computer. Copy your key over with the following command
+Now you should be back on the client's computer. Copy your key over with the following command
 
 ```
 scp /Users/[YOUR USERNAME]/.ssh/id_rsa.pub
@@ -225,7 +225,7 @@ $ exit
 ```
 ![image](images/ssh_long_way.png)
 
-#### You may execut multiple commands by separating them with `;`
+#### You may execute multiple commands by separating them with `;`
 
 ```
 phoebetang@Admins-MacBook-Pro-2 ~ % cd Desktop; cd Projects; mkdir test1
