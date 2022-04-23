@@ -12,9 +12,10 @@ When writing programs, it is common to encounter bugs. In fact, most projects re
 |Debugging| using symptoms and other information to find a bug| 
 |Failure-inducing input| input to the program that causes the bug to execute and symptoms to appear|
 |Deterministic platform| A platform having the property that it can reliably reproduce a bug from its failure-inducing input|
+
 ________
 
-Cite : [Source](https://canvas.ucsd.edu/courses/37650/files/6915277?module_item_id=1359831) from Week 3 Lecture 6.
+**Cite** : [Source](https://canvas.ucsd.edu/courses/37650/files/6915277?module_item_id=1359831) from Week 3 Lecture 6.
 <br/><br/>
 
 ## Bug and Fix One
