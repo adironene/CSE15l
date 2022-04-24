@@ -83,3 +83,46 @@ ________
 <br/><br/>
 
 ## Bug and Fix 3
+
+The last bug that we found was that if we don't input a file as args or if the path doesn't work, the program just throws an exception and crashes.
+
+#### Symptom of the failure-inducing input
+
+- This is the error message for calling MarkdownParse without an arg
+```
+phoebetang@Admins-MacBook-Pro-2 Debug_lab_files % java MarkdownParse             
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+        at MarkdownParse.main(MarkdownParse.java:29)
+```
+-  This is the error message for calling MarkdownParse with an invalid arg
+```
+phoebetang@Admins-MacBook-Pro-2 Debug_lab_files % java MarkdownParse dj
+Exception in thread "main" java.nio.file.NoSuchFileException: dj
+        at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+        at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+        at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:218)
+        at java.base/java.nio.file.Files.newByteChannel(Files.java:380)
+        at java.base/java.nio.file.Files.newByteChannel(Files.java:432)
+        at java.base/java.nio.file.Files.readAllBytes(Files.java:3289)
+        at java.base/java.nio.file.Files.readString(Files.java:3367)
+        at java.base/java.nio.file.Files.readString(Files.java:3326)
+        at MarkdownParse.main(MarkdownParse.java:43)
+```
+
+#### Test file for a failure-inducing input
+
+We did not use a file for this bug since we are trying to handle the `ArrayIndexOutOfBoundsException` with no file input and the `java.nio.file.NoSuchFileException` with an invalid test file input.
+
+```
+![link1](https://something.com)
+```
+#### Code change
+
+![code change](images/Lab2/cc3.png)
+
+#### Summary
+
+The MarkDown parser was supposed to ignore image links. I added another `if condition` to check if there is a `!` in front of the `openBracket`. If so, update the `currentIndex` and `continue`, which skips the rest of the loop. I also checked to see if the `openBracket` is at index 0 so `openBracket - 1` does not cause an `StringIndexOutOfBoundsException`.
+
+________
