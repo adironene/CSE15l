@@ -32,10 +32,11 @@ public class MarkdownParse {
 
         return toReturn;
     }
-    private static String checkString(Path p) throws IOException{
+
+    private static String checkString(Path p) throws IOException {
         try {
             content = Files.readString(p);
-        } catch (java.nio.file.NoSuchFileException e) {
+        } catch (Exception e) {
             System.out.println("Please type the name of MarkDown file to be parsed");
             Scanner scan = new Scanner(System.in);
             Path newPath = Path.of(scan.nextLine());
@@ -43,6 +44,7 @@ public class MarkdownParse {
         }
         return content;
     }
+
     public static void main(String[] args) throws IOException {
         Path fileName;
         if (args.length == 0) {

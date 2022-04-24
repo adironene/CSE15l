@@ -115,7 +115,9 @@ Exception in thread "main" java.nio.file.NoSuchFileException: dj
 We did not use a file for this bug since we are trying to handle the `ArrayIndexOutOfBoundsException` with no file input and the `java.nio.file.NoSuchFileException` with an invalid test file input.
 
 ```
-![link1](https://something.com)
+java MarkdownParse             
+java MarkdownParse fakefile
+
 ```
 #### Code change
 
@@ -123,6 +125,6 @@ We did not use a file for this bug since we are trying to handle the `ArrayIndex
 
 #### Summary
 
-The MarkDown parser was supposed to ignore image links. I added another `if condition` to check if there is a `!` in front of the `openBracket`. If so, update the `currentIndex` and `continue`, which skips the rest of the loop. I also checked to see if the `openBracket` is at index 0 so `openBracket - 1` does not cause an `StringIndexOutOfBoundsException`.
+To handle the `ArrayIndexOutOfBoundsException` and the `java.nio.file.NoSuchFileException`, I checked if the args' length is 0. I imported a `scanner` to ask the user to retype the file input if it is invalid. In order to do so, I created a separate `checkString`  method and implemented a recursive call to the method until the input is valid. There were two changes for this bug. At first, I only did catch for `java.nio.file.NoSuchFileException`. However, I realized that if the user typed enter again, the mistake would not be caught. So I changed it to catch `exception e` to allow other exceptions. 
 
 ________
