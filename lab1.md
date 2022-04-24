@@ -15,18 +15,18 @@ We will be using [VS Code](https://code.visualstudio.com/) as our main IDE for t
 <br/><br/>
 When the procedure is done, your IDE should look something similar to the image below.
 
-![image](images/VSCode.png)
+![image](images/Lab1/VSCode.png)
 <br/><br/>
 
 The following table provides a brief description of the icons on the side menu.
 
 | Icon             | Name             | Functionality |
 | :--------- | ----------- | ------------ |
-| ![image](images/explorer.png)| Explorer|Place to view the files in your working directory|
-| ![image](images/search.png) | Search | You may enter a `keyword` and VS Code will find the files containing that string.|
-| ![image](images/source.png)| Source Control | The class that handles the changes made to the directory.|
-| ![image](images/debug.png) | Run and Debug | This function allows you to debug the errors in your code.|
-| ![image](images/extensions.png) | Extensions | You may install extension packages here. They are extra tools that may be useful for certain projects.|
+| ![image](images/Lab1/explorer.png)| Explorer|Place to view the files in your working directory|
+| ![image](images/Lab1/search.png) | Search | You may enter a `keyword` and VS Code will find the files containing that string.|
+| ![image](images/Lab1/source.png)| Source Control | The class that handles the changes made to the directory.|
+| ![image](images/Lab1/debug.png) | Run and Debug | This function allows you to debug the errors in your code.|
+| ![image](images/Lab1/extensions.png) | Extensions | You may install extension packages here. They are extra tools that may be useful for certain projects.|
 
 ________
 <br/><br/>
@@ -70,7 +70,7 @@ Type `yes` in your terminal and enter your password.
 
 When this process is done, your screen should look similar to that below.
 
-![image](images/SSH_setup.png)
+![image](images/Lab1/SSH_setup.png)
 
 You are now connected to a CSE lab computer. We will now explore some commands.<br>
 
@@ -98,7 +98,7 @@ ________
 <br/><br/>
 I ran a few commands below. The narration can be found under the screenshot.
 
-![image](images/terminal_commands.png)
+![image](images/Lab1/terminal_commands.png)
 
 - I changed directory back to admin
 - I changed directory to `Desktop` and then a pre-existing directory called `Projects`
@@ -134,7 +134,7 @@ class WhereAmI {
 
 The following image writes, builds, and executes the `WhereAmI.java` file. As we can see, the information is fetched from the client.
 
-![image](images/whereami_setup.png)
+![image](images/Lab1/whereami_setup.png)
 
 Next, I will copy the file to the server with the command.
 ```
@@ -148,7 +148,7 @@ Finally, I will take the following steps to run the program from server.
 - Use the `java` command to run the `WhereAmI` class
 - The program then fetches information from the server
 
-![image](images/whereami_ssh.png)
+![image](images/Lab1/whereami_ssh.png)
 
 *note: it did not prompt me to enter password because I already have a key set up (cover next section). The `WhereAmI.class` is already there because I built it before*<br>
 
@@ -178,7 +178,7 @@ $ ssh-keygen
 <br/><br/>
 After those steps, your terminal should look similar to the image below.
 
-![image](images/set%20up%20ssh%20key.png)
+![image](images/Lab1/set%20up%20ssh%20key.png)
 
 After, log in to the server and execute the following commands.
 
@@ -194,11 +194,11 @@ scp /Users/[YOUR USERNAME]/.ssh/id_rsa.pub
 cs15lsp22[YOUR USER]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
 
-![image](images/copy%20key.png)
+![image](images/Lab1/copy%20key.png)
 
 Once this process is done, you should be able to execute `ssh` and `scp` without a password.<br>
 
-![image](images/SSH_Login_keychain.png)
+![image](images/Lab1/SSH_Login_keychain.png)
 
 <br/><br/>
 
@@ -215,7 +215,7 @@ There are a few ways to optimize the process of executing commands. The followin
 
 #### You may execute another command after SSHing into the server by putting it in quotes. After both commands are executed, it exits out of the connection.<br>
 
-![image](images/ssh_shortcut.png)
+![image](images/Lab1/ssh_shortcut.png)
 This command is equivalent to the following 3 commands
 
 ```
@@ -223,7 +223,7 @@ This command is equivalent to the following 3 commands
 $ cat WhereAmI.java
 $ exit
 ```
-![image](images/ssh_long_way.png)
+![image](images/Lab1/ssh_long_way.png)
 
 #### You may execute multiple commands by separating them with `;`
 

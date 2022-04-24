@@ -24,6 +24,8 @@ ________
 
 ## Bug and Fix One
 
+This first bug that our team encountered was the `java.lang.OutOfMemoryError` error. 
+
 
 ## Bug and Fix Two
 ## Bug and Fix Three
