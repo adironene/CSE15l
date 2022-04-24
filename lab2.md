@@ -65,16 +65,18 @@ phoebetang@Admins-MacBook-Pro-2 Debug_lab_files % java MarkdownParse imageFile.m
 ```
 #### Test file for a failure-inducing input
 
-The test file that we used can be found [here](). I have also included the file's content below
+The test file that we used can be found [here](https://github.com/adironene/CSE15l/blob/main/Debug_lab_files/imageFile.md). I have also included the file's content below
 
 ```
 ![link1](https://something.com)
 ```
 #### Code change
 
-![code change]()
+![code change](images/Lab2/CC2.png)
 
 #### Summary
+
+The MarkDown parser was supposed to ignore image links. I added another `if condition` to check if there is a `!` in front of the `openBracket`. If so, update the `currentIndex` and `continue`, which skips the rest of the loop. I also checked to see if the `openBracket` is at index 0 so `openBracket - 1` does not cause an `StringIndexOutOfBoundsException`.
 ________
 <br/><br/>
 
