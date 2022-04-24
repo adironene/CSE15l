@@ -1,5 +1,7 @@
 # Lab Report 2
 
+[Home](https://adironene.github.io/CSE15l/index.html) 
+
 When writing programs, it is common to encounter bugs. In fact, most projects require an average debug time of 50% - 75%. This report demonstrates some of the bugs found in the Markdown-parser and the steps our team took to fix the issues.
 
 ### Debugging Terminology

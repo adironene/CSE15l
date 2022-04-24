@@ -1,5 +1,7 @@
 # Lab Report 1
 
+[Home](https://adironene.github.io/CSE15l/index.html) 
+
 The Secure Shell Protocol, also known as SSH, allows two computers to securely communicate over an unsecured network. This blog documents the steps required to set up and use remote access. 
  <br/><br/>
 ## Installing VS Code   
