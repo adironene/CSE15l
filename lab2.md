@@ -22,10 +22,33 @@ ________
 
 <br/><br/>
 
-## Bug and Fix One
+## Bug and Fix 1
 
 This first bug that our team encountered was the `java.lang.OutOfMemoryError` error. 
 
+#### Symptom of that failure-inducing input
 
-## Bug and Fix Two
-## Bug and Fix Three
+![bug1](images/Lab2/bug1.png)
+
+#### Test file for a failure-inducing input
+
+The test file that we used can be found [here](https://github.com/adironene/CSE15l/blob/main/Debug_lab_files/test-file.md). I have also included the file's content below
+
+```
+# Title
+
+[link1](https://something.com)
+[link2](some-thing.html)
+
+```
+
+#### Code change
+
+![code change](images/Lab2/CC1.png)
+
+#### Summary
+
+Our group found that the code was entering an infinite loop under the `while (currentIndex < markdown.length())` condition. There was an extra space in the Markdown file so when the loop tried to search for a `closeParen` again, it may return `-1`. The line `currentIndex = closeParen + 1` made the currentIndex be -1 + 1 = 0, which resets it to the beginning of the string. I added an `if condition` to check if any of the elements we are searching for is not found, or -1, and break out of the loop if so.
+<br/><br/>
+## Bug and Fix 2
+## Bug and Fix 3
