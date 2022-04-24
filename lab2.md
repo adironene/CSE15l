@@ -122,6 +122,7 @@ java MarkdownParse fakefile
 #### Code change
 
 ![code change](images/Lab2/cc3.png)
+![code change](images/Lab2/cc3_1.png)
 
 #### Summary
 
