@@ -50,6 +50,7 @@ The test file that we used can be found [here](https://github.com/adironene/CSE1
 #### Summary
 
 Our group found that the code was entering an infinite loop under the `while (currentIndex < markdown.length())` condition. There was an extra space in the Markdown file so when the loop tried to search for a `closeParen` again, it may return `-1`. The line `currentIndex = closeParen + 1` made the currentIndex be -1 + 1 = 0, which resets it to the beginning of the string. I added an `if condition` to check if any of the elements we are searching for is not found, or -1, and break out of the loop if so.
+
 ________
 <br/><br/>
 
@@ -72,11 +73,12 @@ The test file that we used can be found [here](https://github.com/adironene/CSE1
 ```
 #### Code change
 
-![code change](images/Lab2/CC2.png)
+![code change](images/Lab2/cc2.png)
 
 #### Summary
 
 The MarkDown parser was supposed to ignore image links. I added another `if condition` to check if there is a `!` in front of the `openBracket`. If so, update the `currentIndex` and `continue`, which skips the rest of the loop. I also checked to see if the `openBracket` is at index 0 so `openBracket - 1` does not cause an `StringIndexOutOfBoundsException`.
+
 ________
 <br/><br/>
 
