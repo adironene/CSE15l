@@ -4,7 +4,7 @@
 
 In this lab report, I will discuss a few skills introduced to facilitate working with SSH and Github Repos. 
 - **SSH Configuration** - Set up a shortcut to refrain from typing out the entire server name. If set up correctly, I only need to type `ssh ieng6` instead of `ssh cs15lsp22[user name]@ieng6.ucsd.edu`.
-- **Github Access**
+- **Github Access** - Set up a SSH Key to Github. When the key is set up correctly, you should be able to `clone` from private repository and `push`.
 - **Copying Directories**
 
 <br/><br/>
@@ -51,3 +51,27 @@ scp test.txt ieng6:~/
 <br/><br/>
 
 ## Github Access
+
+Github no longer supports password login for pushing through terminal. In order to performs such actions, you must set up token-based login. This skill allows us to set up SSH keys to our github accounts.
+
+#### Generate a new SSH Key
+- Open up terminal and type the following line
+
+```
+ssh-keygen -t ed25519 -C "[your email]@[email].com"
+```
+- Press `enter` twice to skip passphrase
+- After this process, you should have your key set up
+
+![image](images/Lab3/setKey.png)
+
+- Type the following line in terminal to copy the contents of the key file
+
+```
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+- Go to Github > Profile Icon > Settings > SSH and GPG Keys
+- Click on `New SSH Key`
+- Enter a description for your key and paste in the copied text on clipboard
+- Click on `Add SSH Key` and finish up
+
