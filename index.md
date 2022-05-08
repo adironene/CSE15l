@@ -10,3 +10,4 @@ The weblog of the techniques learned from CSE 15.
 | ----------------------------------------------------- | --------------------------------------------------- |
 | [Lab 1](https://adironene.github.io/CSE15l/lab1.html) | Steps to set up and use Secure Shell Protocol (SSH) |
 | [Lab 2](https://adironene.github.io/CSE15l/lab2.html) | Process of debugging MarkdownParser                 |
+| [Lab 3](https://adironene.github.io/CSE15l/lab3.html) | Tips and Tools for SSH and Github                   |
