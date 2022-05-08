@@ -31,4 +31,23 @@ When you are finished with the steps above, your config file should look like th
 
 ![image](images/Lab3/SSH_Config.png)
 
+After the config file has been set up, you should be able to type `ssh ieng6` and log in successfully
 
+![image](images/Lab3/Ieng6_Login.png)
+
+Now I will try to `scp` a file to the server with the nickname shortcut. I will execute the following command.
+```
+touch test.txt
+scp test.txt ieng6:~/
+```
+- I created the file `test.txt`
+- I copied the file to the ieng6 server
+- After this, I should be able to see the file on the server when I SSH in.
+
+![image](images/Lab3/SCP_ieng6.png)
+
+----
+
+<br/><br/>
+
+## Github Access
