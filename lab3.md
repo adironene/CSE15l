@@ -75,3 +75,40 @@ pbcopy < ~/.ssh/id_ed25519.pub
 - Enter a description for your key and paste in the copied text on clipboard
 - Click on `Add SSH Key` and finish up
 
+#### Public Key Storage
+
+**Public key on Github**
+The public key on Github is stored in settings > SSH and GPG Keys.
+
+![image](images/Lab3/github_pub.png)
+
+**Public key on computer**
+
+The public key on the computer is stored in .ssh/id_ed25519.pub.
+
+![image](images/Lab3/comp_pub.png)
+
+#### Private Key Storage
+
+The private key on the computer is stored in .ssh/id_ed25519
+
+![image](images/Lab3/comp_priv.png)
+
+#### Show running git commands
+
+- I first cloned my CSE15L repo in my Project directory on my SSH server.
+![image](images/Lab3/clone.png)
+- Next, I added a file in the directory and checked the status.
+![image](images/Lab3/add_lab.png)
+- Finally, I commited and pushed the changes to the main branch.
+![image](images/Lab3/push.png)
+
+#### Show a link for the resulting commit
+
+The link for the resulting commit can be found [here](https://github.com/adironene/CSE15l/commit/d9da9bf5d693fc0425fa5813aacf445986019b20)
+
+----
+
+<br/><br/>
+
+## Copying Directories
