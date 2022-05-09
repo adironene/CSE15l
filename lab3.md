@@ -5,7 +5,7 @@
 In this lab report, I will discuss a few skills introduced to facilitate working with SSH and Github Repos. 
 - **SSH Configuration** - Set up a shortcut to refrain from typing out the entire server name. If set up correctly, I only need to type `ssh ieng6` instead of `ssh cs15lsp22[user name]@ieng6.ucsd.edu`.
 - **Github Access** - Set up a SSH Key to Github. When the key is set up correctly, you should be able to `clone` from private repository and `push`.
-- **Copying Directories**
+- **Copying Directories** - Being able to copy entire directories instead of individual files.
 
 <br/><br/>
 
@@ -148,6 +148,8 @@ scp -r markdown-parser ieng6:~/
 - Finally, I built and ran the JUnit test file
   
 ![image](images/Lab3/test_ieng6.png)
+
+<br/><br/>
 
 ####  combining commands
 
