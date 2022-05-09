@@ -13,6 +13,7 @@ In this lab report, I will discuss a few skills introduced to facilitate working
 
 It is tedious to type out `ssh cs15lsp22[user name]@ieng6.ucsd.edu` each time I try to log on to a server. To address this problem, we can edit the SSH Config file to add a nickname for the server. This way, SSH knows which server to log on to when you type the nickname.
 
+#### Show your .ssh/config file
 
 To set up, take the following steps:
 - Create or edit the `~/.ssh/config` file
@@ -31,9 +32,13 @@ When you are finished with the steps above, your config file should look like th
 
 ![image](images/Lab3/SSH_Config.png)
 
+#### Show the ssh command 
+
 After the config file has been set up, you should be able to type `ssh ieng6` and log in successfully
 
 ![image](images/Lab3/Ieng6_Login.png)
+
+#### Show an scp command
 
 Now I will try to `scp` a file to the server with the nickname shortcut. I will execute the following command.
 ```
@@ -98,8 +103,12 @@ The private key on the computer is stored in .ssh/id_ed25519
 
 - I first cloned my CSE15L repo in my Project directory on my SSH server.
 ![image](images/Lab3/clone.png)
+<br/><br/>
+
 - Next, I added a file in the directory and checked the status.
 ![image](images/Lab3/add_lab.png)
+<br/><br/>
+
 - Finally, I commited and pushed the changes to the main branch.
 ![image](images/Lab3/push.png)
 
