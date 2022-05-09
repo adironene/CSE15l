@@ -121,3 +121,42 @@ The link for the resulting commit can be found [here](https://github.com/adirone
 <br/><br/>
 
 ## Copying Directories
+
+We often used the `scp` command to copy files to the remote server. However, the command alone does not work on an entire directory. This section will work with copying directories.
+
+#### Show copying your whole markdown-parse directory
+
+We will be using `scp -r` to copy entire directories.
+
+- I first git cloned the markdown-parse repo 
+- After, I copied the directory to the ieng6 server with the following command
+
+```
+scp -r markdown-parser ieng6:~/
+```
+
+<br/><br/>
+
+![image](images/Lab3/scp_-r.png)
+
+<br/><br/>
+
+#### logging into your ieng6 account and test
+
+- I first logged on to my ieng6 account
+- After, I CD into the directory
+- Finally, I built and ran the JUnit test file
+  
+![image](images/Lab3/test_ieng6.png)
+
+####  combining commands
+
+I will use the following command to combine `scp`, `ssh` and compiling and running the test file.
+
+```
+ssh ieng6 "cd markdown-parser/;javac -cp libs/junit-4.12.jar:libs/hamcrest-core-1.3.jar MarkdownParseTest.java;java -cp libs/junit-4.12.jar:libs/hamcrest-core-1.3.jar:. org.junit.runner.JUnitCore MarkdownParseTest"
+```
+
+![image](images/Lab3/combined_commands.png)
+
+----
