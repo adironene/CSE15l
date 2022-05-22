@@ -247,10 +247,13 @@ And then there's more text
 
 #### The correct output
 
+The preview from VS Code showed three links, one embeded normally while the other 2 links are linked from the `http` keyword.
 The markdown from VS Code is attached below.
 
+![image](images/Lab4/snippet3_preview.png)
+
 ``` 
-[]
+["https://twitter.com/", "https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule", "https://cse.ucsd.edu/"]
 ```
 
 #### The test implementation
@@ -258,32 +261,69 @@ The markdown from VS Code is attached below.
 > For my test file, this is how I added the tester method.
 
 ```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
 
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class MarkdownParseTest {
+
+    @Test
+    public void testFile() throws IOException {
+        Path fileName = Path.of("lab4-snippet3.md");
+        String content = Files.readString(fileName);
+        MarkdownParse m = new MarkdownParse();
+        ArrayList<String> links = m.getLinks(content);
+        ArrayList<String> correct_links = new ArrayList<>(Arrays.asList("https://twitter.com/",
+                "https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule", "https://cse.ucsd.edu/"));
+        assertEquals(correct_links, links);
+    }
+}
 ```
 
-<!-- The lab4-snippet1.md file had the snippet copied over. -->
+The lab4-snippet3.md file had the snippet copied over.
 
 > For the other group's file, this is how I added the tester method.
 
 ```java
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
+public class MarkdownParseTest {
+
+    @Test
+    public void MarkdownParseTest() throws IOException {
+        ArrayList<String> expected = new ArrayList<>(List.of("https://twitter.com/",
+                "https://sites.google.com/eng.ucsd.edu/cse-15l-spring-2022/schedule", "https://cse.ucsd.edu/"));
+        ArrayList<String> resultArray = MarkdownParse.getLinks(Files.readString(Path.of("lab4-snippet3.md")));
+        assertEquals(expected, resultArray);
+    }
+}
 ```
 
-<!-- The lab4-snippet1.md file had the snippet copied over. -->
+The lab4-snippet3.md file had the snippet copied over.
 
 #### The outputs of the test
 
-<!-- My code did not pass the JUnit Test -->
+My code did not pass the JUnit Test
 
-<!-- ![image](images/Lab4/snippet1_my.png) -->
+![image](images/Lab4/snippet3_my.png)
 
-<!-- The other group's code did not pass the JUnit Test -->
+The other group's code did not pass the JUnit Test
 
-<!-- ![image](images/Lab4/snippet1_other.png) -->
+![image](images/Lab4/snippet3_other.png)
 
 #### An explanation of the code
 
 > Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 
-A: 
+A: I definitely think that a small code change won't be able to make my program pass all test cases related to snippet 3. There are too many things to check, including back-tracking, nested If statements, and other requirements. I definitely think that I would need to divide the method into helper methods to check for each conditions.
