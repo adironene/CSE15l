@@ -34,7 +34,10 @@ We will be running 3 tests on both [my solution](https://github.com/adironene/ma
 
 The first line would be embeded so the 2nd, 3rd, and 4th link should count.
 
-``` ["`google.com", "google.com", "ucsd.edu"]```
+``` 
+["`google.com", "google.com", "ucsd.edu"]
+```
+
 
 #### The test implementation
 
