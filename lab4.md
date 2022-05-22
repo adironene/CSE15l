@@ -32,7 +32,11 @@ We will be running 3 tests on both [my solution](https://github.com/adironene/ma
 
 #### The correct output
 
-The first line would be embeded so the 2nd, 3rd, and 4th link should count.
+The first line would be embeded so the 2nd, 3rd, and 4th link should count. The markdown from VS Code is attached below.
+
+![image](images/Lab4/snippet1_preview.png)
+
+correct array:
 
 ``` 
 ["`google.com", "google.com", "ucsd.edu"]
@@ -126,43 +130,89 @@ A: Yes, a small code change would make my program work for snippet 1. I believe 
 
 #### The correct output
 
+- The first line will pick up a.com as the link
+- The second line should have a.com(()) as the link
+- The third line is just example.com
 
-``` []```
+The markdown from VS Code is attached below. 
+
+![image](images/Lab4/snippet2_preview.png)
+
+The correct array should be 
+
+``` 
+["a.com", "a.com(())", "example.com"]
+```
 
 #### The test implementation
 
 > For my test file, this is how I added the tester method.
 
 ```java
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Arrays;
 
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class MarkdownParseTest {
+
+    @Test
+    public void testFile() throws IOException {
+        Path fileName = Path.of("lab4-snippet2.md");
+        String content = Files.readString(fileName);
+        MarkdownParse m = new MarkdownParse();
+        ArrayList<String> links = m.getLinks(content);
+        ArrayList<String> correct_links = new ArrayList<>(Arrays.asList("a.com", "a.com(())", "example.com"));
+        assertEquals(correct_links, links);
+    }
+}
 ```
 
-<!-- The lab4-snippet1.md file had the snippet copied over. -->
+The lab4-snippet2.md file had the snippet copied over.
 
 > For the other group's file, this is how I added the tester method.
 
 ```java
+import static org.junit.Assert.*;
+import org.junit.*;
+import java.util.*;
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
+public class MarkdownParseTest {
+
+    @Test
+    public void MarkdownParseTest() throws IOException {
+        ArrayList<String> expected = new ArrayList<>(List.of("a.com", "a.com(())", "example.com"));
+        ArrayList<String> resultArray = MarkdownParse.getLinks(Files.readString(Path.of("lab4-snippet2.md")));
+        assertEquals(expected, resultArray);
+    }
+}
 ```
 
-<!-- The lab4-snippet1.md file had the snippet copied over. -->
+The lab4-snippet2.md file had the snippet copied over.
 
 #### The outputs of the test
 
-<!-- My code did not pass the JUnit Test -->
+My code did not pass the JUnit Test
 
-<!-- ![image](images/Lab4/snippet1_my.png) -->
+![image](images/Lab4/snippet2_my.png)
 
-<!-- The other group's code did not pass the JUnit Test -->
+The other group's code did not pass the JUnit Test
 
-<!-- ![image](images/Lab4/snippet1_other.png) -->
+![image](images/Lab4/snippet2_other.png)
 
 #### An explanation of the code
 
 > Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 
-A: 
+A: I don't think a small change would be able to make my program work. Checking for parantheses, brackets, and escaped brackets would already take 6 lines with an if() statement for each symbole and another line. We also need to check for other conditions such as the location of the symbol.
 
 ## Test Case 3
 
@@ -197,8 +247,11 @@ And then there's more text
 
 #### The correct output
 
+The markdown from VS Code is attached below.
 
-``` []```
+``` 
+[]
+```
 
 #### The test implementation
 
