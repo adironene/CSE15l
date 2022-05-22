@@ -7,7 +7,7 @@ Debugging might take more time than the intial coding process. It is important t
 
 ## Intro
 
-We will be running 3 tests on both [my solution](https://github.com/adironene/markdown-parser) and [other group solution](https://github.com/Combobyte/markdown-parser) to MarkdownParser For each test, I will include
+We will be running 3 tests on both [my solution](https://github.com/adironene/markdown-parser) and [other group solution](https://github.com/Combobyte/markdown-parser) to MarkdownParser. For each test, I will include
 - The test file
 - The correct output
 - The test implementation
@@ -212,7 +212,9 @@ The other group's code did not pass the JUnit Test
 > Do you think there is a small (<10 lines) code change that will make your program work for snippet 2 and all related cases that nest parentheses, brackets, and escaped brackets? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 
-A: I don't think a small change would be able to make my program work. Checking for parantheses, brackets, and escaped brackets would already take 6 lines with an if() statement for each symbole and another line. We also need to check for other conditions such as the location of the symbol.
+A: I don't think a small change would be able to make my program work. Checking for parantheses, brackets, and escaped brackets would already take 10 lines with an if() statement for each symbol, which includes "(", ")", "\","[", and "]" and another line for the result of the if() statement. We also need to check for other conditions such as the location of the symbol.
+
+<br/><br/>
 
 ## Test Case 3
 
@@ -326,4 +328,4 @@ The other group's code did not pass the JUnit Test
 > Do you think there is a small (<10 lines) code change that will make your program work for snippet 3 and all related cases that have newlines in brackets and parentheses? If yes, describe the code change. If not, describe why it would be a more involved change.
 
 
-A: I definitely think that a small code change won't be able to make my program pass all test cases related to snippet 3. There are too many things to check, including back-tracking, nested If statements, and other requirements. I definitely think that I would need to divide the method into helper methods to check for each conditions.
+A: I definitely think that a small code change won't be able to make my program pass all test cases related to snippet 3. There are too many things to check, including back-tracking, nested If statements, and other requirements to cover the content in brackets stretching to multiple lines and getting rid of extra space. I definitely think that I would need to divide the method into helper methods to check for each conditions.
