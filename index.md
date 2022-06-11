@@ -12,3 +12,4 @@ The weblog of the techniques learned from CSE 15.
 | [Lab 2](https://adironene.github.io/CSE15l/lab2.html) | Process of debugging MarkdownParser                 |
 | [Lab 3](https://adironene.github.io/CSE15l/lab3.html) | Tips and Tools for SSH and Github                   |
 | [Lab 4](https://adironene.github.io/CSE15l/lab4.html) | Clean Code Practice and Debugging                   |
+| [Lab 5](https://adironene.github.io/CSE15l/lab5.html) | Debugging with different implementations            |
