@@ -49,11 +49,11 @@ expected output is (list the links that are expected in the output).
 
 `my output`
 
-![image](images/Lab5/my_1.png)
+![image](images/lab5/my_1.png)
 
 `provided output`
 
-![image](images/Lab5/provided_1.png)
+![image](images/lab5/provided_1.png)
 
 `expected output`
 
@@ -109,11 +109,11 @@ expected output is (list the links that are expected in the output).
 
 `my output`
 
-![image](images/Lab5/my2.png)
+![image](images/lab5/my2.png)
 
 `provided output`
 
-![image](images/Lab5/provided2.png)
+![image](images/Lab5/../lab5/provided2.png)
 
 `expected output`
 
